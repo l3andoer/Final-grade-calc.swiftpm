@@ -8,9 +8,8 @@ struct ContentView: View {
     @State var rrec: any Shape = RoundedRectangle(cornerRadius: 13.0)
     var body: some View {
         ZStack{
-            Rectangle()
-                .foregroundColor(.clear)
             LinearGradient(gradient: Gradient(colors: [Color.purple, Color.pink, Color.white]), startPoint: .top, endPoint: .bottomTrailing)
+                
             VStack{
         
                     RoundedRectangle(cornerRadius: 13.0)
@@ -61,12 +60,13 @@ struct ContentView: View {
                         }
                 }
                 .foregroundColor(.white)
-                Text("you will need a \(output) to get your desired grade")
-                    .frame(width: 380,height: 100)
-                    .bold()
-                    .font(.title2)
+                    Text("you will need a \(output) to get your desired grade")
+                        .frame(width: 380,height: 100)
+                        .bold()
+                        .font(.title2)
             }
-            
+            .padding()
+            .foregroundColor(.white)
         }
             }
     let gradient = LinearGradient(colors: [Color.white , Color.cyan, Color.mint],
